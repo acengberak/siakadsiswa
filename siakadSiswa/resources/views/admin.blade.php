@@ -36,9 +36,12 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     @yield('main-content')
+    @yield('kelas')
+    @yield('list-kelas')
+    @yield('update')
   </div>
   <!-- /.content-wrapper -->
- 
+
   @include('main-footer')
 
   <!-- Control Sidebar -->

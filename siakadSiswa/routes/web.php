@@ -18,8 +18,18 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('redirect/{driver}', 'Auth\LoginController@redirectToProvider')->name('login.provider');
+Route::get('{driver}/callback', 'Auth\LoginController@handleProviderCallback')->name('login.callback');
 Route::get('/mapel', 'MatapelajaranController@index');
 Route::post('/mapel', 'MatapelajaranController@create');
 Route::get('/mapel', 'MatapelajaranController@read');
 Route::put('/mapel/update/{id}', 'MatapelajaranController@update');
 Route::delete('/mapel/{id}', 'MatapelajaranController@destroy');
+
+Route::get('/daftar', 'KelasController@index');
+Route::post('/daftar', 'KelasController@store');
+Route::get('/show', 'KelasController@show');
+Route::get('/show/edit/{id}', 'KelasController@edit');
+Route::put('/show/update/{id}', 'KelasController@update');
+Route::get('/show/delete/{id}', 'KelasController@destroy');
