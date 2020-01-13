@@ -102,11 +102,11 @@
                 <td>{{$item->kode_mapel}}</td>
                 <td>{{$item->nama_mapel}}</td>
                 <td>{{$item->kelas}}</td>
-                <td><a class="btn btn-success btn-sm" data-toggle="modal" data-target="#edit{{$item->id}}">Ubah</a>
+                <td class="d-flex"><button type="button" class="btn btn-primary mr-2" data-toggle="modal" data-target="#edit{{$item->id}}"><i class="fas fa-edit text-gray-300 mr-2"></i>Ubah</button>
                 <form action="/mapel/{{$item->id}}" method="POST">
                     {{ csrf_field() }}
                     {{method_field('delete')}}
-                    <button class="btn btn-danger btn-sm" onclick="return confirm('Anda Yakin Menghapus Data {{$item->nama_mapel}}')" type="submit">Hapus</button>
+                    <button class="btn btn-danger " onclick="return confirm('Anda Yakin Menghapus Data {{$item->nama_mapel}}')" type="submit"><i class="fas fa-check text-gray-300 mr-2"></i>Hapus</button>
                 </form></td>
                    
             </tr>
