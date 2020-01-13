@@ -19,3 +19,7 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/mapel', 'MatapelajaranController@index');
+Route::post('/mapel', 'MatapelajaranController@create');
+Route::get('/mapel', 'MatapelajaranController@read');
+Route::put('/mapel/update/{id}', 'MatapelajaranController@update');
+Route::delete('/mapel/{id}', 'MatapelajaranController@destroy');
