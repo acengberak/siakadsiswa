@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card ">
                   <div class="card-header text-center">
-                    Daftar Kelas
+                    <h4>Daftar Kelas</h4>
                   </div>
                   <table class="table">
                     <thead>
