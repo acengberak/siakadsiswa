@@ -166,13 +166,7 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
                             <button type="submit" class="btn btn-primary">Simpan</button>
-                            {{-- save alert --}}
-                            <script>
-                                var msg = '{{Session::get('alert')}}';
-                                var exist = '{{Session::has('alert')}}';
-                                if (exist) {alert(msg);}
-                            </script>
-                            {{-- end alert  --}}
+                           
                         </div>
                     </div>
                 </form>
@@ -181,5 +175,11 @@
     </div>
     @endforeach
 
-
+ {{-- save alert --}}
+ <script>
+    var msg = '{{Session::get('alert')}}';
+    var exist = '{{Session::has('alert')}}';
+    if (exist) {alert(msg);}
+</script>
+{{-- end alert  --}}
 @endsection
