@@ -31,14 +31,18 @@
 <div class="wrapper">
 
     @include('main-header')
-
     @include('main-sidebar')
+
+
+    @yield('siswa.read')
+    @yield('siswa.update_siswa')
+    @yield('siswa.daftar_siswa')
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     @yield('main-content')
   </div>
   <!-- /.content-wrapper -->
- 
+
   @include('main-footer')
 
   <!-- Control Sidebar -->

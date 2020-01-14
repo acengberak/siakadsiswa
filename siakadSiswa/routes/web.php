@@ -23,3 +23,10 @@ Route::post('/mapel', 'MatapelajaranController@create');
 Route::get('/mapel', 'MatapelajaranController@read');
 Route::put('/mapel/update/{id}', 'MatapelajaranController@update');
 Route::delete('/mapel/{id}', 'MatapelajaranController@destroy');
+
+Route::get('/tampil','SiswaController@hubung');
+Route::post('/tampil','SiswaController@hubungDatabase');
+Route::get('/tampilkan', 'SiswaController@read_web');
+Route::get('/tampilkan/edit/{id_nis_siswa}','SiswaController@edit');
+Route::put('/tampilkan/update/{id_nis_siswa}', 'SiswaController@update');
+Route::delete('/tampilkan/{id_nis_siswa}','SiswaController@destroy');

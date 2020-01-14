@@ -56,7 +56,7 @@
             </ul> --}}
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="/tampilkan" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Data Siswa
@@ -65,14 +65,14 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="" class="nav-link">
               <i class="nav-icon fas fa-tree"></i>
               <p>
                 Data Kelas
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
-           
+
           </li>
           <li class="nav-item has-treeview">
             <a href="/mapel" class="nav-link">
