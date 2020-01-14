@@ -113,7 +113,7 @@
             @endforeach
         </tbody>
     </table>
-
+</div>
     {{-- MODAL --}}
     @foreach ($data as $item)
     <div class="modal fade" id="edit{{$item->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -182,4 +182,4 @@
     @endforeach
 
 
-    @endsection
+@endsection

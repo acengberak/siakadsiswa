@@ -21,6 +21,8 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('redirect/{driver}', 'Auth\LoginController@redirectToProvider')->name('login.provider');
 Route::get('{driver}/callback', 'Auth\LoginController@handleProviderCallback')->name('login.callback');
+
+
 Route::get('/mapel', 'MatapelajaranController@index');
 Route::post('/mapel', 'MatapelajaranController@create');
 Route::get('/mapel', 'MatapelajaranController@read');
@@ -29,7 +31,7 @@ Route::delete('/mapel/{id}', 'MatapelajaranController@destroy');
 
 Route::get('/daftar', 'KelasController@index');
 Route::post('/daftar', 'KelasController@store');
-Route::get('/show', 'KelasController@show');
-Route::get('/show/edit/{id}', 'KelasController@edit');
-Route::put('/show/update/{id}', 'KelasController@update');
-Route::get('/show/delete/{id}', 'KelasController@destroy');
+Route::get('/daftar-kelas', 'KelasController@show');
+Route::get('/daftar-kelas/edit/{id}', 'KelasController@edit');
+Route::put('/daftar-kelas/update/{id}', 'KelasController@update');
+Route::get('/daftar-kelas/delete/{id}', 'KelasController@destroy');

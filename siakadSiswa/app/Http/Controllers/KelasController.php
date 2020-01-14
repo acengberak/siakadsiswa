@@ -14,9 +14,8 @@ class KelasController extends Controller
    */
   public function index()
   {
-      $kelas= Kelas::all();
-      return view('kelas.create', compact('kelas'));
-
+    $kelas = Kelas::all();
+    return view('kelas.create', compact('kelas'));
   }
 
   /**
@@ -26,9 +25,9 @@ class KelasController extends Controller
    */
   public function create()
   {
-      $kelas= Kelas::all();
-      // dd($kelas);
-      return view('kelas.create', compact('kelas'));
+    $kelas = Kelas::all();
+    // dd($kelas);
+    return view('kelas.create', compact('kelas'));
   }
 
   /**
@@ -39,14 +38,14 @@ class KelasController extends Controller
    */
   public function store(Request $request)
   {
-      $kelas= new Kelas;
+    $kelas = new Kelas;
 
-      $kelas->kode_kelas= $request->get('kode_kelas');
-      $kelas->ruang_kelas= $request->get('ruang_kelas');
-      $kelas->sub_kelas= $request->get('sub_kelas');
+    $kelas->kode_kelas = $request->get('kode_kelas');
+    $kelas->ruang_kelas = $request->get('ruang_kelas');
+    $kelas->sub_kelas = $request->get('sub_kelas');
 
-      $kelas->save();
-      return redirect('show');
+    $kelas->save();
+    return redirect('daftar-kelas');
   }
 
   /**
@@ -57,8 +56,8 @@ class KelasController extends Controller
    */
   public function show()
   {
-      $kelas= Kelas::all();
-      return view('kelas.show', compact('kelas'));
+    $kelas = Kelas::all();
+    return view('kelas.show', compact('kelas'));
   }
 
   /**
@@ -69,7 +68,7 @@ class KelasController extends Controller
    */
   public function edit($id)
   {
-    $kelas= Kelas::find($id);
+    $kelas = Kelas::find($id);
     return view('kelas.update', compact('kelas'));
   }
 
@@ -83,14 +82,14 @@ class KelasController extends Controller
 
   public function update(Request $request, $id)
   {
-    $kelas= Kelas::find($id);
+    $kelas = Kelas::find($id);
 
-    $kelas->kode_kelas= $request->kode_kelas;
-    $kelas->ruang_kelas= $request->ruang_kelas;
-    $kelas->sub_kelas= $request->sub_kelas;
+    $kelas->kode_kelas = $request->kode_kelas;
+    $kelas->ruang_kelas = $request->ruang_kelas;
+    $kelas->sub_kelas = $request->sub_kelas;
 
     $kelas->save();
-    return redirect('show');
+    return redirect('daftar-kelas');
   }
 
   /**
@@ -101,8 +100,8 @@ class KelasController extends Controller
    */
   public function destroy($id)
   {
-      $kelas= Kelas::find($id);
-      $kelas->delete();
-      return redirect('show');
+    $kelas = Kelas::find($id);
+    $kelas->delete();
+    return redirect('daftar-kelas');
   }
 }

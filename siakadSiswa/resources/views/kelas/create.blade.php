@@ -14,14 +14,17 @@
                       <div class="form-group col-sm-6">
                         <label for="exampleInputEmail1">Kode Kelas</label>
                         <input type="text" name="kode_kelas" class="form-control" value="">
+                        <small id="helpId" class="text-muted">Contoh: R.10.1</small>
                       </div>
                       <div class="form-group col-sm-6">
                         <label for="exampleInputPassword1">Ruang Kelas</label>
                         <input type="text" name="ruang_kelas" class="form-control" value="">
+                        <small id="helpId" class="text-muted">Contoh: Kelas 10</small>
                       </div>
                       <div class="form-group col-sm-6">
                         <label for="exampleInputPassword1">Sub Kelas</label>
                         <input type="text" name="sub_kelas" class="form-control" value="">
+                        <small id="helpId" class="text-muted">Contoh: A</small>
                       </div>
                       <div class="card-footer text-muted">
                         <button type="submit" class="btn btn-primary">Daftar!</button>

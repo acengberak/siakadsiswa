@@ -1,6 +1,6 @@
 @extends('admin')
 @section('list-kelas')
-<div class="container">
+<div class="container-fluid pt-3">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -23,13 +23,13 @@
                         <td>{{$room->ruang_kelas}}</td>
                         <td>{{$room->sub_kelas}}</td>
                         <td>
-                            <a href="/show/edit/{{$room->id}}">Edit</a>
+                            <a href="/daftar-kelas/edit/{{$room->id}}">Edit</a>
                         </td>
                         <td>
-                          <form action="/show/{{$room->id}}" method="post">
+                          <form action="/daftar-kelas/{{$room->id}}" method="post">
                             {{csrf_field()}}
                             {{method_field('DELETE')}}
-                            <a href="/show/delete/{{$room->id}}">Hapus</a>
+                            <a href="/daftar-kelas/delete/{{$room->id}}"onclick="return confirm('Anda Yakin Menghapus Data {{$room->id}}')">Hapus</a>
                           </form>
                         </td>
                       </tr>

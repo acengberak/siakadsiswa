@@ -9,7 +9,7 @@
                     Daftarkan Kelas Anda!
                   </div>
                   <div class="card-body">
-                    <form action="/show/update/{{$kelas->id}}" method="POST">
+                    <form action="/daftar-kelas/update/{{$kelas->id}}" method="POST">
                       {{csrf_field()}}
                       {{method_field('PUT')}}
                       <div class="form-group col-sm-6">
